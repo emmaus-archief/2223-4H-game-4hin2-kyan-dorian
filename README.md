@@ -18,3 +18,39 @@ https://emmauscollege.github.io/informatica/game/
 - icon <br>
         http://www.iconarchive.com/show/android-lollipop-icons-by-dtafalonso/Play-Games-icon.html
 - ...
+Deel 1
+
+1. Vijand maken
+2. Vijand omhoog laten komen
+3. Klik van muis laten registreren
+4. vijand verdwijnen bij klik
+5. Puntentelling
+
+Deel 2
+
+1. Meerdere vijanden maken
+2. Alle vijanden na elkaar omhoog laten komen
+3. Achtergrond maken
+4. Achtergrond verbeteren
+5. Achergrond afronden
+
+Deel 3
+
+1. Grond bepalen
+2. De Y aangeven waar de vijand stopt
+3. De X aangeven waar de vijand stopt
+
+
+Deel 4
+
+1. Vijand uiterlijk geven
+2. Verschillende vijanden ander uiterlijk geven
+3. Puntentelling vormgeven
+4. Puntentelling in beeld laten komen
+5. Timer toevoegen
+
+
+Einde
+
+1. mooi maken
+2. netjes maken
