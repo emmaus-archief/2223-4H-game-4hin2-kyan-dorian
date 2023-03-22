@@ -22,7 +22,7 @@ Deel 1
 
 1. Vijand maken
 2. Vijand omhoog laten komen
-3. Klik van muis laten registreren
+3. Klik van muis laten registreren => https://p5js.org/reference/#/p5/mouseIsPressed
 4. vijand verdwijnen bij klik
 5. Puntentelling
 
