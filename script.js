@@ -33,7 +33,7 @@ var beweegAlles = function() {
   // speler
 
   // vijand
-vijandY:+2
+
 
   // kogel
 };
@@ -59,10 +59,20 @@ var tekenAlles = function() {
   // achtergrond
 
   // vijand
+  draw = function() {
+    if (mouseIsPressed === true) {
+      background(29, 0, 245);
+  }  else{
+ background(29, 0, 245);
   fill("white");
   rect(vijandX - 25, vijandY - 25, 50, 50);
   fill("black");
   ellipse(vijandX, vijandY, 10, 10);
+  vijandY = vijandY - 2.5;
+  } 
+    ellipse(mouseX, mouseY, 20, 20);
+    
+  }
   // kogel
 
   // speler
