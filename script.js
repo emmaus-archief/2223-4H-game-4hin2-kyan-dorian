@@ -51,6 +51,7 @@ var verwerkBotsing = function() {
       vijandX = (random(0,1200));
   }  
   vorigeKeerMousePressed = mouseIsPressed;
+  
 
   // botsing kogel tegen vijand
 
