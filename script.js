@@ -58,7 +58,15 @@ var verwerkBotsing = function() {
   
 
   // botsing kogel tegen vijand
-
+  if (vijandX - mouseX <40 && 
+      vijandX - mouseX >-40 &&
+     vijandY - mouseY <20 &&
+     vijandY - mouseY > -20 && mouseIsPressed === true 
+      ) {
+    console.log("botsing");
+     } else {
+    console.log(mouseIsPressed)
+  }
   // update punten en health
 
 };
