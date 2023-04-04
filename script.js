@@ -50,23 +50,17 @@ var beweegAlles = function() {
  */
 var verwerkBotsing = function() {
   // botsing speler tegen vijand
-    if (vorigeKeerMousePressed === false && mouseIsPressed === true) {
-      vijandY = (600);
-      vijandX = (random(0,1200));
-  }  
-  vorigeKeerMousePressed = mouseIsPressed;
-  
-
-  // botsing kogel tegen vijand
-  if (vijandX - mouseX <40 && 
-      vijandX - mouseX >-40 &&
-     vijandY - mouseY <20 &&
-     vijandY - mouseY > -20 && mouseIsPressed === true 
-      ) {
+  if (vijandX - mouseX < 50 &&
+    vijandX - mouseX > -50 &&
+    vijandY - mouseY < 30 &&
+    vijandY - mouseY > -30 && // muis op target
+    vorigeKeerMousePressed === false && mouseIsPressed === true) { // muis net ingedrukt
     console.log("botsing");
-     } else {
-    console.log(mouseIsPressed)
+    vijandY = (600);
+    vijandX = (random(0, 1200));
   }
+  vorigeKeerMousePressed = mouseIsPressed;
+
   // update punten en health
 
 };
@@ -77,14 +71,14 @@ var verwerkBotsing = function() {
 var tekenAlles = function() {
   // achtergrond
   background(29, 0, 245);
-  
+
   // vijand
   image(img, vijandX - 50, vijandY - 49, 100, 100);
   fill("red");
   ellipse(vijandX, vijandY, 10, 10);
 
-    
-  
+
+
   // kogel
 
   // speler
