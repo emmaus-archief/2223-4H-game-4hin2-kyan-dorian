@@ -37,7 +37,13 @@ var img; //plaatje
 var beweegAlles = function() {
   // speler
 
-  // vijand
+  // vijand 
+if (vijandY < 0){
+  vijandY = 600 ;
+}
+
+
+  
   vijandY = vijandY - 2.5;
 
   // kogel
@@ -52,8 +58,8 @@ var verwerkBotsing = function() {
   // botsing speler tegen vijand
   if (vijandX - mouseX < 50 &&
     vijandX - mouseX > -50 &&
-    vijandY - mouseY < 30 &&
-    vijandY - mouseY > -30 && // muis op target
+    vijandY - mouseY < 50 &&
+    vijandY - mouseY > -50 && // muis op target
     vorigeKeerMousePressed === false && mouseIsPressed === true) { // muis net ingedrukt
     console.log("botsing");
     vijandY = (600);
