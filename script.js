@@ -39,11 +39,9 @@ var beweegAlles = function() {
 
   // vijand 
 if (vijandY < 0){
-  vijandY = 600 ;
+  vijandY = (600) ;
+  vijandX = (random(0, 1200));
 }
-
-
-  
   vijandY = vijandY - 2.5;
 
   // kogel
