@@ -26,7 +26,8 @@ var vijandY = 600; // y-positie van speler
 var vorigeKeerMousePressed = false;
 
 var img; //plaatje
-
+var bg; //achtergrond
+var y = 0;
 /* ********************************************* */
 /* functies die je gebruikt in je game           */
 /* ********************************************* */
@@ -75,7 +76,8 @@ var verwerkBotsing = function() {
 var tekenAlles = function() {
   // achtergrond
   background(29, 0, 245);
-
+  // opdracht: iets met image
+  image(bg, 0, 0)
   // vijand
   image(img, vijandX - 50, vijandY - 49, 100, 100);
   fill("red");
@@ -112,6 +114,7 @@ var checkGameOver = function() {
  */
 function preload() {
   img = loadImage('target.png');
+     bg = loadImage('brawlahhalla.jpeg');
 }
 /**
  * setup
