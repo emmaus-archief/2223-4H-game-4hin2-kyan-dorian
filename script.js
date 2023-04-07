@@ -39,12 +39,11 @@ var beweegAlles = function() {
   // speler
 
   // vijand 
-if (vijandY < 0){
-  vijandY = (600) ;
-  vijandX = (random(0, 1200));
-}
-  vijandY = vijandY - 2.5;
-
+  if (vijandY < 0) {
+    vijandY = (600);
+    vijandX = (random(0, 1200));
+  }
+  vijandY = vijandY - 4;
   // kogel
 };
 
@@ -58,14 +57,13 @@ var verwerkBotsing = function() {
   if (vijandX - mouseX < 50 &&
     vijandX - mouseX > -50 &&
     vijandY - mouseY < 50 &&
-    vijandY - mouseY > -50 && // muis op target
+    vijandY - mouseY > -50 &&
     vorigeKeerMousePressed === false && mouseIsPressed === true) { // muis net ingedrukt
     console.log("botsing");
     vijandY = (600);
     vijandX = (random(0, 1200));
   }
   vorigeKeerMousePressed = mouseIsPressed;
-
   // update punten en health
 
 };
@@ -82,9 +80,6 @@ var tekenAlles = function() {
   image(img, vijandX - 50, vijandY - 49, 100, 100);
   fill("red");
   ellipse(vijandX, vijandY, 10, 10);
-
-
-
   // kogel
 
   // speler
@@ -114,7 +109,7 @@ var checkGameOver = function() {
  */
 function preload() {
   img = loadImage('target.png');
-     bg = loadImage('brawlahhalla.jpeg');
+  bg = loadImage('brawlhalla.jpg');
 }
 /**
  * setup
