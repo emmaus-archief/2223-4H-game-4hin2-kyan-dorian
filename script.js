@@ -19,7 +19,7 @@
 /* ********************************************* */
 const SPELEN = 1;
 const GAMEOVER = 2;
-const UITLEG = 3 ;
+const UITLEG = 3;
 var spelStatus = SPELEN;
 
 var vijandX = 600; // x-positie van speler
@@ -31,6 +31,7 @@ var bg; //achtergrond
 var y = 0;
 
 var punten = 0;
+var levens = 3;
 /* ********************************************* */
 /* functies die je gebruikt in je game           */
 /* ********************************************* */
@@ -63,7 +64,8 @@ var verwerkBotsing = function() {
     vijandY - mouseY > -50 &&
     vorigeKeerMousePressed === false && mouseIsPressed === true) { // muis net ingedrukt
     console.log("botsing");
-    punten = punten+1 ;
+    punten = punten + 1;
+    levens = levens - 1;
     vijandY = (600);
     vijandX = (random(0, 1200));
   }
@@ -92,9 +94,15 @@ var tekenAlles = function() {
   // punten en health
   textSize(32);
   fill(0, 102, 153);
-  text(punten, 30, 60);
 
-};
+  text(punten, 20, 60);
+
+  textSize(32);
+  fill(0, 102, 153);
+  text(levens, 1200, 60);
+
+}
+
 
 /**
  * return true als het gameover is
@@ -144,21 +152,21 @@ function draw() {
     if (checkGameOver()) {
       spelStatus = GAMEOVER;
     }
-    console.log ("spelen")
+    console.log("spelen")
   }
   if (spelStatus === GAMEOVER) {
     // teken game-over scherm
-console.log ("game over")
+    console.log("game over")
     texsize(20);
     fill("white");
     text("gamer Over", 100, 100);
-    if (keyIsDown(32)){
+    if (keyIsDown(32)) {
       spelstatus === UITLEG
     }
-    
+
   }
   if (spelStatus === UITLEG) {
     // teken game-over scherm
-    console.log ("begin Scherm")
+    console.log("begin Scherm")
   }
 }
