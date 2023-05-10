@@ -19,6 +19,7 @@
 /* ********************************************* */
 const SPELEN = 1;
 const GAMEOVER = 2;
+const UITLEG = 3 ;
 var spelStatus = SPELEN;
 
 var vijandX = 600; // x-positie van speler
@@ -143,9 +144,21 @@ function draw() {
     if (checkGameOver()) {
       spelStatus = GAMEOVER;
     }
+    console.log ("spelen")
   }
   if (spelStatus === GAMEOVER) {
     // teken game-over scherm
-
+console.log ("game over")
+    texsize(20);
+    fill("white");
+    text("gamer Over", 100, 100);
+    if (keyIsDown(32)){
+      spelstatus === UITLEG
+    }
+    
+  }
+  if (spelStatus === UITLEG) {
+    // teken game-over scherm
+    console.log ("begin Scherm")
   }
 }
