@@ -31,6 +31,7 @@ var bg; //achtergrond
 var y = 0;
 
 var punten = 0;
+var levens = 3;
 /* ********************************************* */
 /* functies die je gebruikt in je game           */
 /* ********************************************* */
@@ -64,6 +65,7 @@ var verwerkBotsing = function() {
     vorigeKeerMousePressed === false && mouseIsPressed === true) { // muis net ingedrukt
     console.log("botsing");
     punten = punten+1 ;
+    levens = levens-1 ;
     vijandY = (600);
     vijandX = (random(0, 1200));
   }
@@ -92,9 +94,19 @@ var tekenAlles = function() {
   // punten en health
   textSize(32);
   fill(0, 102, 153);
-  text(punten, 10, 60);
+  text(punten, 20, 60);
 
-};
+  textSize(32);
+  fill(0, 102, 153);
+  text(levens, 1200, 60);
+
+  
+
+  
+
+  
+
+
 
 /**
  * return true als het gameover is
@@ -161,4 +173,3 @@ console.log ("game over")
     // teken game-over scherm
     console.log ("begin Scherm")
   }
-}
