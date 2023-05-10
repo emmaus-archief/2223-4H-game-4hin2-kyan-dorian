@@ -28,6 +28,8 @@ var vorigeKeerMousePressed = false;
 var img; //plaatje
 var bg; //achtergrond
 var y = 0;
+
+var punten = 0;
 /* ********************************************* */
 /* functies die je gebruikt in je game           */
 /* ********************************************* */
@@ -60,6 +62,7 @@ var verwerkBotsing = function() {
     vijandY - mouseY > -50 &&
     vorigeKeerMousePressed === false && mouseIsPressed === true) { // muis net ingedrukt
     console.log("botsing");
+    punten = punten+1 ;
     vijandY = (600);
     vijandX = (random(0, 1200));
   }
@@ -86,6 +89,9 @@ var tekenAlles = function() {
   ellipse(mouseX, mouseY, 20, 20);
 
   // punten en health
+  textSize(32);
+  fill(0, 102, 153);
+  text(punten, 10, 60);
 
 };
 
