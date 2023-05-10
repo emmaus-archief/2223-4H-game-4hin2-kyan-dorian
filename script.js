@@ -92,7 +92,7 @@ var tekenAlles = function() {
   // punten en health
   textSize(32);
   fill(0, 102, 153);
-  text(punten, 10, 60);
+  text(punten, 30, 60);
 
 };
 
