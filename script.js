@@ -165,8 +165,8 @@ function draw() {
     fill("black");
     text("gamer Over, Druk spatie voor start", 100, 100);
     if (keyIsDown(32)) {
-      levens === 3
-      spelStatus === SPELEN;
+      levens = 3;
+      spelStatus = SPELEN;
     }
 
   }
