@@ -20,16 +20,15 @@ https://emmauscollege.github.io/informatica/game/
 - ...
 Deel 1
 
-1. Vijand maken
-2. Vijand omhoog laten komen
-3. Klik van muis laten registreren => https://p5js.org/reference/#/p5/mouseIsPressed
-4. vijand verdwijnen bij klik
-5. Puntentelling
+1. Vijand maken X
+2. Vijand omhoog laten komen X
+3. Klik van muis laten registreren => https://p5js.org/reference/#/p5/mouseIsPressed X
+4. vijand verdwijnen bij klik X
+5. Puntentelling X
 
 Deel 2
 
-1. Meerdere vijanden maken
-2. Alle vijanden na elkaar omhoog laten komen
+1. Alle vijanden na elkaar omhoog laten komen
 3. Achtergrond maken
 4. Achtergrond verbeteren
 5. Achergrond afronden
