@@ -31,7 +31,7 @@ var bg; //achtergrond
 var y = 0;
 
 var punten = 0;
-var levens = 3;
+var levens = 3; 
 /* ********************************************* */
 /* functies die je gebruikt in je game           */
 /* ********************************************* */
@@ -109,6 +109,10 @@ var tekenAlles = function() {
  * anders return false
  */
 var checkGameOver = function() {
+  if ( levens === 0 ){
+    return true;
+  }
+
   // check of HP 0 is , of tijd op is, of ...
   return false;
 };
@@ -157,11 +161,12 @@ function draw() {
   if (spelStatus === GAMEOVER) {
     // teken game-over scherm
     console.log("game over")
-    texsize(20);
-    fill("white");
-    text("gamer Over", 100, 100);
+    textSize(50);
+    fill("black");
+    text("gamer Over, Druk spatie voor start", 100, 100);
     if (keyIsDown(32)) {
-      spelstatus === UITLEG
+      levens === 3
+      spelStatus === SPELEN;
     }
 
   }
