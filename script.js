@@ -43,7 +43,7 @@ var beweegAlles = function() {
   // speler
 
   // vijand 
-  if (vijandY < 0) {
+
     vijandY = (600);
     vijandX = (random(0, 1200));
     levens = levens - 1;
@@ -163,7 +163,8 @@ function draw() {
     console.log("game over")
     textSize(50);
     fill("black");
-    text("gamer Over, Druk spatie voor start", 100, 100);
+    text("gamer Over", 500, 320);
+    text("druk spatie voor starten", 380, 400);
     if (keyIsDown(32)) {
       levens = 3;
       spelStatus = SPELEN;
