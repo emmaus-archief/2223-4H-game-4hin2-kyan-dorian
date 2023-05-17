@@ -46,6 +46,7 @@ var beweegAlles = function() {
   if (vijandY < 0) {
     vijandY = (600);
     vijandX = (random(0, 1200));
+    levens = levens - 1;
   }
   vijandY = vijandY - 4;
   // kogel
@@ -65,7 +66,6 @@ var verwerkBotsing = function() {
     vorigeKeerMousePressed === false && mouseIsPressed === true) { // muis net ingedrukt
     console.log("botsing");
     punten = punten + 1;
-    levens = levens - 1;
     vijandY = (600);
     vijandX = (random(0, 1200));
   }
