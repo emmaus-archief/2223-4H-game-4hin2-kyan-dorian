@@ -167,6 +167,7 @@ function draw() {
     text("druk spatie voor starten", 380, 400);
     if (keyIsDown(32)) {
       levens = 3;
+      punten = 0;
       spelStatus = SPELEN;
     }
 
