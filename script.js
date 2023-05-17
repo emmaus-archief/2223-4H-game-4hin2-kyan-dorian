@@ -26,7 +26,6 @@ var vijandX = 600; // x-positie van speler
 var vijandY = 600; // y-positie van speler
 var vorigeKeerMousePressed = false;
 
-var myfont; //font
 var img; //plaatje
 var bg; //achtergrond
 var y = 0;
@@ -44,7 +43,7 @@ var beweegAlles = function() {
   // speler
 
   // vijand 
-
+  if (vijandY < 0) {
     vijandY = (600);
     vijandX = (random(0, 1200));
     levens = levens - 1;
@@ -130,7 +129,6 @@ var checkGameOver = function() {
 function preload() {
   img = loadImage('target.png');
   bg = loadImage('brawlhalla.jpg');
-  myfont = loadFont("Smokum-Regular.ttf");
 }
 /**
  * setup
@@ -143,7 +141,6 @@ function setup() {
 
   // Kleur de achtergrond blauw, zodat je het kunt zien
   background('blue');
-   textFont(myfont);
 }
 
 /**
