@@ -25,7 +25,7 @@ var spelStatus = SPELEN;
 var vijandX = 600; // x-positie van speler
 var vijandY = 600; // y-positie van speler
 var vijandX2 = 300;
-var vijandY2 = 600;
+var vijandY2 = 620;
 var vorigeKeerMousePressed = false;
 
 var img; //plaatje
@@ -190,7 +190,7 @@ function draw() {
       levens = 5;
       punten = 0;
       vijandY = 600;
-      vijandY2 = 600;
+      vijandY2 = 620;
       spelStatus = SPELEN;
     }
 
