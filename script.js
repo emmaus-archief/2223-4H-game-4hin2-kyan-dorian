@@ -24,6 +24,8 @@ var spelStatus = SPELEN;
 
 var vijandX = 600; // x-positie van speler
 var vijandY = 600; // y-positie van speler
+var vijandX2 = 600;
+var vijandY2 = 600;
 var vorigeKeerMousePressed = false;
 
 var img; //plaatje
@@ -31,7 +33,7 @@ var bg; //achtergrond
 var y = 0;
 
 var punten = 0;
-var levens = 3; 
+var levens = 3;
 /* ********************************************* */
 /* functies die je gebruikt in je game           */
 /* ********************************************* */
@@ -49,6 +51,12 @@ var beweegAlles = function() {
     levens = levens - 1;
   }
   vijandY = vijandY - 4;
+  if (vijandY2 < 0) {
+    vijandY2 = (600);
+    vijandX2 = (random(0, 1200));
+    levens = levens - 1;
+  }
+  vijandY2 = vijandY2 - 4;
   // kogel
 };
 
@@ -69,6 +77,16 @@ var verwerkBotsing = function() {
     vijandY = (600);
     vijandX = (random(0, 1200));
   }
+  if (vijandX2 - mouseX < 50 &&
+    vijandX2 - mouseX > -50 &&
+    vijandY2 - mouseY < 50 &&
+    vijandY2 - mouseY > -50 &&
+    vorigeKeerMousePressed === false && mouseIsPressed === true) { // muis net ingedrukt
+    console.log("botsing");
+    punten = punten + 1;
+    vijandY2 = (600);
+    vijandX2 = (random(0, 1200));
+  }
   vorigeKeerMousePressed = mouseIsPressed;
   // update punten en health
 
@@ -86,6 +104,9 @@ var tekenAlles = function() {
   image(img, vijandX - 50, vijandY - 49, 100, 100);
   fill("red");
   ellipse(vijandX, vijandY, 10, 10);
+  image(img, vijandX2 - 50, vijandY2 - 49, 100, 100);
+  fill("red");
+  ellipse(vijandX2, vijandY2, 10, 10);
   // kogel
 
   // speler
@@ -109,7 +130,7 @@ var tekenAlles = function() {
  * anders return false
  */
 var checkGameOver = function() {
-  if ( levens === 0 ){
+  if (levens === 0) {
     return true;
   }
 
