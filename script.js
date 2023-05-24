@@ -184,7 +184,7 @@ function draw() {
     console.log("game over")
     textSize(50);
     fill("black");
-    text("gamer Over", 500, 320);
+    text("Game Over", 500, 320);
     text("druk spatie voor starten", 380, 400);
     if (keyIsDown(32)) {
       levens = 5;
