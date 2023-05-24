@@ -24,7 +24,7 @@ var spelStatus = SPELEN;
 
 var vijandX = 600; // x-positie van speler
 var vijandY = 600; // y-positie van speler
-var vijandX2 = 600;
+var vijandX2 = 300;
 var vijandY2 = 600;
 var vorigeKeerMousePressed = false;
 
@@ -33,7 +33,7 @@ var bg; //achtergrond
 var y = 0;
 
 var punten = 0;
-var levens = 3;
+var levens = 5;
 /* ********************************************* */
 /* functies die je gebruikt in je game           */
 /* ********************************************* */
@@ -187,8 +187,10 @@ function draw() {
     text("gamer Over", 500, 320);
     text("druk spatie voor starten", 380, 400);
     if (keyIsDown(32)) {
-      levens = 3;
+      levens = 5;
       punten = 0;
+      vijandY = 600;
+      vijandY2 = 600;
       spelStatus = SPELEN;
     }
 
