@@ -57,6 +57,18 @@ var beweegAlles = function() {
     levens = levens - 1;
   }
   vijandY2 = vijandY2 - 4;
+
+  if (punten >= 20){
+    
+    vijandY = vijandY - 2;
+    vijandY2 = vijandY2 - 2;
+    
+  }
+  
+    if (punten >= 40) {
+      vijandY = vijandY - 2;
+      vijandY2 = vijand Y2 - 2;
+    }
   // kogel
 };
 
